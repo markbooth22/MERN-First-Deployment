@@ -24,9 +24,11 @@
   margin-left: 5px;
 }
 
+
 .addPet {
   background-color: #2b78e4;
   height: 35px;
+  display: inline;
 }
 
 .boldType {
@@ -58,12 +60,14 @@
 }
 
 form {
-  display: flex;
+  display:block;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 30px;
 }
-
+.inputCollection{
+  display: inline-flex;
+}
 .firstInput {
   display: inline-block;
 }

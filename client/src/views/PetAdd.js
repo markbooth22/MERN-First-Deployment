@@ -74,80 +74,90 @@ const PetAdd = (props) => {
       <h2>Know a pet needing a home?</h2>
       <div className="border">
         <form onSubmit={onSubmitHandler}>
-          <div className="firstInput">
-            <InputGroup
-              label="Pet's Name: "
-              value={form.petName.value}
-              type="text"
-              handleChange={handleChange}
-              name="petName"
-              errorMessage={fieldValidation(form.petName)}
-            />
-            {errs.petName ? (
-              <span style={{ color: "red" }}>{errs.petName.message}</span>
-            ) : null}
+          <div className="inputCollection">
+            <div className="firstInput">
+              <InputGroup
+                label="Pet's Name: "
+                value={form.petName.value}
+                type="text"
+                handleChange={handleChange}
+                name="petName"
+                errorMessage={fieldValidation(form.petName)}
+              />
+              {errs.petName ? (
+                <span style={{ color: "red" }}>{errs.petName.message}</span>
+              ) : null}
 
-            <InputGroup
-              label="Pet's Type: "
-              value={form.petType.value}
-              type="text"
-              handleChange={handleChange}
-              name="petType"
-              errorMessage={fieldValidation(form.petType)}
-            />
-            {errs.petType ? (
-              <span style={{ color: "red" }}>{errs.petType.message}</span>
-            ) : null}
-            <InputGroup
-              label="Pet's Description: "
-              value={form.petDescription.value}
-              type="text"
-              handleChange={handleChange}
-              name="petDescription"
-              errorMessage={fieldValidation(form.petDescription)}
-            />
-            {errs.petDescription ? (
-              <span style={{ color: "red" }}>
-                {errs.petDescription.message}
-              </span>
-            ) : null}
-            {/* <Button className="addPet" type="submit"><Link to={`/`}><i className="fa fa-download"></i>Add Pet</Link></Button> */}
-          </div>
-          <div className="secondInput">
-            <p>Skills (Optional)</p>
-            <InputGroup
-              label="Pet's First Skill: "
-              value={form.petSkillOne.value}
-              type="text"
-              handleChange={handleChange}
-              name="petSkillOne"
-            />
-            {errs.petSkillOne ? (
-              <span style={{ color: "red" }}>{errs.petSkillOne.message}</span>
-            ) : null}
+              <InputGroup
+                label="Pet's Type: "
+                value={form.petType.value}
+                type="text"
+                handleChange={handleChange}
+                name="petType"
+                errorMessage={fieldValidation(form.petType)}
+              />
+              {errs.petType ? (
+                <span style={{ color: "red" }}>{errs.petType.message}</span>
+              ) : null}
+              <InputGroup
+                label="Pet's Description: "
+                value={form.petDescription.value}
+                type="text"
+                handleChange={handleChange}
+                name="petDescription"
+                errorMessage={fieldValidation(form.petDescription)}
+              />
+              {errs.petDescription ? (
+                <span style={{ color: "red" }}>
+                  {errs.petDescription.message}
+                </span>
+              ) : null}
+              {/* <Button className="addPet" type="submit"><Link to={`/`}><i className="fa fa-download"></i>Add Pet</Link></Button> */}
+            </div>
+            <div className="secondInput">
+              <p>Skills (Optional)</p>
+              <InputGroup
+                label="Pet's First Skill: "
+                value={form.petSkillOne.value}
+                type="text"
+                handleChange={handleChange}
+                name="petSkillOne"
+              />
+              {errs.petSkillOne ? (
+                <span style={{ color: "red" }}>{errs.petSkillOne.message}</span>
+              ) : null}
 
-            <InputGroup
-              label="Pet's Second Skill: "
-              value={form.petSkillTwo.value}
-              type="text"
-              handleChange={handleChange}
-              name="petSkillTwo"
-            />
-            {errs.petSkillTwo ? (
-              <span style={{ color: "red" }}>{errs.petSkillTwo.message}</span>
-            ) : null}
-            <InputGroup
-              label="Pet's Third Skill: "
-              value={form.petSkillThree.value}
-              type="text"
-              handleChange={handleChange}
-              name="petSkillThree"
-            />
-            {errs.petSkillThree ? (
-              <span style={{ color: "red" }}>{errs.petSkillThree.message}</span>
-            ) : null}
+              <InputGroup
+                label="Pet's Second Skill: "
+                value={form.petSkillTwo.value}
+                type="text"
+                handleChange={handleChange}
+                name="petSkillTwo"
+              />
+              {errs.petSkillTwo ? (
+                <span style={{ color: "red" }}>{errs.petSkillTwo.message}</span>
+              ) : null}
+              <InputGroup
+                label="Pet's Third Skill: "
+                value={form.petSkillThree.value}
+                type="text"
+                handleChange={handleChange}
+                name="petSkillThree"
+              />
+              {errs.petSkillThree ? (
+                <span style={{ color: "red" }}>
+                  {errs.petSkillThree.message}
+                </span>
+              ) : null}
+            </div>
           </div>
-          <Button className="addPet" type="submit"><Link to={`/`}><i className="fa fa-download"></i>Add Pet</Link></Button>
+          <div className="addPetButton">
+            <Button className="addPet" type="submit">
+              <Link to={`/`}>
+                <i className="fa fa-download"></i>Add Pet
+              </Link>
+            </Button>
+          </div>
         </form>
       </div>
     </div>

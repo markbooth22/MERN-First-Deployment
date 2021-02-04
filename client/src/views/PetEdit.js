@@ -3,7 +3,6 @@ import { Link, navigate } from "@reach/router";
 import axios from "axios";
 import { Button, InputGroup } from "../Utils/Utils";
 
-
 const PetEdit = (props) => {
   const [pet, setPet] = useState({});
   const [petName, setPetName] = useState("");
@@ -76,73 +75,79 @@ const PetEdit = (props) => {
       <h2>Edit {pet.petName}</h2>
       <div className="border">
         <form onSubmit={onSubmitHandler}>
-          <div className="firstINput">
-            <InputGroup
-              label="Pet's Name: "
-              value={petName}
-              type="text"
-              handleChange={(e) => setPetName(e.target.value)}
-              name="petName"
-            />
-            {errs.petName ? (
-              <span style={{ color: "red" }}>{errs.petName.message}</span>
-            ) : null}
-            <InputGroup
-              label="Type of Pet: "
-              value={petType}
-              type="text"
-              handleChange={(e) => setPetType(e.target.value)}
-              name="petType"
-            />
-            {errs.petType ? (
-              <span style={{ color: "red" }}>{errs.petType.message}</span>
-            ) : null}
-            <InputGroup
-              label="Description of Pet: "
-              value={petDescription}
-              type="text"
-              handleChange={(e) => setPetDescription(e.target.value)}
-              name="petDescription"
-            />
-            {errs.petDescription ? (
-              <span style={{ color: "red" }}>
-                {errs.petDescription.message}
-              </span>
-            ) : null}
-            <Button className="editButton" type="submit"><i className="fas fa-edit"></i>Edit Pet</Button>
-          </div>
-          <div className="secondInput">
-            <p>Skills (Optional)</p>
-            <InputGroup
-              label="Pet's First Skill: "
-              value={petSkillOne}
-              type="text"
-              handleChange={(e) => setPetSkillOne(e.target.value)}
-              name="petSkillOne"
-            />
-            {errs.petSkillOne ? (
-              <span style={{ color: "red" }}>{errs.petSkillOne.message}</span>
-            ) : null}
-            <InputGroup
-              label="Pet's Second Skill: "
-              value={petSkillTwo}
-              type="text"
-              handleChange={(e) => setPetSkillTwo(e.target.value)}
-              name="petSkillTwo"
-            />
-            {errs.petSkillTwo ? (
-              <span style={{ color: "red" }}>{errs.petSkillTwo.message}</span>
-            ) : null}
-            <InputGroup
-              label="Pet's Third Skill: "
-              value={petSkillThree}
-              type="text"
-              handleChange={(e) => setPetSKillThree(e.target.value)}
-              name="petSkillThree"
-            />
-            {errs.petSkillThree ? (
-              <span style={{ color: "red" }}>{errs.petSkillThree.message}</span>
-            ) : null}
+          <div className="inputCollection">
+            <div className="firstINput">
+              <InputGroup
+                label="Pet's Name: "
+                value={petName}
+                type="text"
+                handleChange={(e) => setPetName(e.target.value)}
+                name="petName"
+              />
+              {errs.petName ? (
+                <span style={{ color: "red" }}>{errs.petName.message}</span>
+              ) : null}
+              <InputGroup
+                label="Type of Pet: "
+                value={petType}
+                type="text"
+                handleChange={(e) => setPetType(e.target.value)}
+                name="petType"
+              />
+              {errs.petType ? (
+                <span style={{ color: "red" }}>{errs.petType.message}</span>
+              ) : null}
+              <InputGroup
+                label="Description of Pet: "
+                value={petDescription}
+                type="text"
+                handleChange={(e) => setPetDescription(e.target.value)}
+                name="petDescription"
+              />
+              {errs.petDescription ? (
+                <span style={{ color: "red" }}>
+                  {errs.petDescription.message}
+                </span>
+              ) : null}
+              <Button className="editButton" type="submit">
+                <i className="fas fa-edit"></i>Edit Pet
+              </Button>
+            </div>
+            <div className="secondInput">
+              <p>Skills (Optional)</p>
+              <InputGroup
+                label="Pet's First Skill: "
+                value={petSkillOne}
+                type="text"
+                handleChange={(e) => setPetSkillOne(e.target.value)}
+                name="petSkillOne"
+              />
+              {errs.petSkillOne ? (
+                <span style={{ color: "red" }}>{errs.petSkillOne.message}</span>
+              ) : null}
+              <InputGroup
+                label="Pet's Second Skill: "
+                value={petSkillTwo}
+                type="text"
+                handleChange={(e) => setPetSkillTwo(e.target.value)}
+                name="petSkillTwo"
+              />
+              {errs.petSkillTwo ? (
+                <span style={{ color: "red" }}>{errs.petSkillTwo.message}</span>
+              ) : null}
+              <InputGroup
+                label="Pet's Third Skill: "
+                value={petSkillThree}
+                type="text"
+                handleChange={(e) => setPetSKillThree(e.target.value)}
+                name="petSkillThree"
+              />
+              {errs.petSkillThree ? (
+                <span style={{ color: "red" }}>
+                  {errs.petSkillThree.message}
+                </span>
+              ) : null}
+            </div>
           </div>
         </form>
       </div>
