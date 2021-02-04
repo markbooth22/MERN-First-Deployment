@@ -1,0 +1,159 @@
+.border {
+  border: 1px solid black;
+  width: 600px;
+  padding: 20px 30px;
+}
+
+.borderTwo {
+  border: 1px solid black;
+  width: 600px;
+  padding: 20px 30px;
+  margin-top: 20px;
+}
+
+.editButton {
+  background-color: #2b78e4;
+}
+
+.adoptButton {
+  background-color: #CF2A27;
+  height: 35px;
+}
+
+.edit {
+  margin-left: 5px;
+}
+
+.addPet {
+  background-color: #2b78e4;
+  height: 35px;
+}
+
+.boldType {
+  display: inline-block;
+}
+
+.skillTitle{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.type {
+  display: inline-block;
+  margin-left: 70px;
+}
+
+.description {
+  display: inline-block;
+  margin-left: 20px;
+}
+.skillList {
+  display: inline-block;
+  margin-left: 70px;
+  vertical-align: bottom;
+}
+.skill {
+  margin-top: 0px;
+  height: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.firstInput {
+  display: inline-block;
+}
+.secondInput {
+  display: inline-block;
+}
+
+.header {
+  width: 700px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: center;
+  height: 60px;
+}
+
+.header a {
+  margin-top: 30px;
+}
+.headerTwo {
+  width: 700px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: center;
+  height: 35px;
+}
+
+table {
+  /* margin: 10px auto; */
+  border: 1px solid black;
+  width: 400px;
+}
+
+table tbody:nth-child(odd) {
+  background-color: #eeeeee;
+  border: 1px solid black;
+}
+
+table tbody:nth-child(even) {
+  background-color: white;
+  border: 1px solid black;
+}
+
+table th {
+  border: 1px solid black;
+  background-color: #cccccc;
+  color: black;
+  font-size: 15px;
+  text-align: left;
+  padding: 10px 0px;
+}
+
+table td {
+  border: 1px solid black;
+  padding: 10px 0px;
+  font-size: 15px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

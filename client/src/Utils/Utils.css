@@ -1,0 +1,25 @@
+.label-input {
+
+  color: black;
+  padding: 5px;
+  width: 200px
+}
+
+.error {
+  color: red
+}
+
+.Button a {
+  text-decoration: none;
+  color:white;
+}
+
+.Button {
+  display: block;
+  color: white;
+  border-radius: 3px;
+  width: 100px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 150px;
+}
