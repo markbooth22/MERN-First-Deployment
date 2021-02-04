@@ -7,10 +7,6 @@ const PetSchema = new mongoose.Schema({
     minlength: [3, "Pet's name must be at least three characters"],
     // unique: [true, "Pet's can not have the same name"]
   },
-  petImage: { 
-    type: String,
-    required: [true, "You need to enter a pet's picture"],    
-  },
   petType: {
     type: String,
     required: [true, "You need to enter the pet's type"],

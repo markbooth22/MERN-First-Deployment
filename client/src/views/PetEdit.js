@@ -91,7 +91,7 @@ const PetEdit = (props) => {
               label="Type of Pet: "
               value={petType}
               type="text"
-              handleChange={setPetType}
+              handleChange={(e) => setPetType(e.target.value)}
               name="petType"
             />
             {errs.petType ? (
@@ -101,7 +101,7 @@ const PetEdit = (props) => {
               label="Description of Pet: "
               value={petDescription}
               type="text"
-              handleChange={setPetDescription}
+              handleChange={(e) => setPetDescription(e.target.value)}
               name="petDescription"
             />
             {errs.petDescription ? (
@@ -117,7 +117,7 @@ const PetEdit = (props) => {
               label="Pet's First Skill: "
               value={petSkillOne}
               type="text"
-              handleChange={setPetSkillOne}
+              handleChange={(e) => setPetSkillOne(e.target.value)}
               name="petSkillOne"
             />
             {errs.petSkillOne ? (
@@ -127,7 +127,7 @@ const PetEdit = (props) => {
               label="Pet's Second Skill: "
               value={petSkillTwo}
               type="text"
-              handleChange={setPetSkillTwo}
+              handleChange={(e) => setPetSkillTwo(e.target.value)}
               name="petSkillTwo"
             />
             {errs.petSkillTwo ? (
@@ -137,7 +137,7 @@ const PetEdit = (props) => {
               label="Pet's Third Skill: "
               value={petSkillThree}
               type="text"
-              handleChange={setPetSKillThree}
+              handleChange={(e) => setPetSKillThree(e.target.value)}
               name="petSkillThree"
             />
             {errs.petSkillThree ? (

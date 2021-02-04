@@ -5,6 +5,7 @@ import { Button } from "../Utils/Utils";
 
 const PetDisplay = (props) => {
   const [pet, setPet] = useState({});
+  const {refresh, setRefresh} = props;
 
   useEffect(() => {
     axios
@@ -19,6 +20,7 @@ const PetDisplay = (props) => {
     axios
       .delete(`http://localhost:8000/api/pets/${id}`)
       .then((res) => {
+        setRefresh(refresh + 1);
         console.log("Response: ", res);
       })
       .catch((err) => console.log("Error: ", err));

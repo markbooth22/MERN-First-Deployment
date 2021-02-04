@@ -28,7 +28,7 @@ function App() {
           setRefresh={setRefresh}
         />
         <PetAdd path="/pet/add" refresh={refresh} setRefresh={setRefresh} />
-        <PetDisplay path="/pet/:id" />
+        <PetDisplay path="/pet/:id" refresh={refresh} setRefresh={setRefresh}/>
         <PetEdit path="/:id/edit" refresh={refresh} setRefresh={setRefresh} />
       </Router>
     </div>

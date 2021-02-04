@@ -111,7 +111,7 @@ const PetAdd = (props) => {
                 {errs.petDescription.message}
               </span>
             ) : null}
-            <Button className="addPet" type="submit"><i className="fa fa-download"></i>Add Pet</Button>
+            {/* <Button className="addPet" type="submit"><Link to={`/`}><i className="fa fa-download"></i>Add Pet</Link></Button> */}
           </div>
           <div className="secondInput">
             <p>Skills (Optional)</p>
@@ -147,6 +147,7 @@ const PetAdd = (props) => {
               <span style={{ color: "red" }}>{errs.petSkillThree.message}</span>
             ) : null}
           </div>
+          <Button className="addPet" type="submit"><Link to={`/`}><i className="fa fa-download"></i>Add Pet</Link></Button>
         </form>
       </div>
     </div>
